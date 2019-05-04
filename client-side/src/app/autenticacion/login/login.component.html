@@ -1,0 +1,52 @@
+<div class="sign-in-container">
+  <mat-card class="sign-in-card">
+      <mat-card-header>
+          <mat-card-title>Login</mat-card-title>
+     </mat-card-header>
+     <mat-card-content>
+<form [formGroup]="loginGroup" (ngSubmit)="validar()">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+      <td>
+
+  <mat-form-field>
+    <input matInput placeholder="Correo electronico" formControlName="email"/>
+    <mat-error *ngIf="loginGroup.controls.email.hasError('required')">
+      El correo electrónico es obligatorio
+    </mat-error>
+    <mat-error *ngIf="loginGroup.controls.email.hasError('email')&& !loginGroup.controls.email.hasError('required')">
+      El correo electrónico no es valido
+    </mat-error>
+  </mat-form-field>
+            </td>
+        </tr>
+  <tr>
+      <td>
+  <mat-form-field>
+    <input matInput placeholder="Contraseña" formControlName="password" type="password"/>
+    <mat-error *ngIf="loginGroup.controls.password.hasError('required')">
+      El contraseña es obligatorio
+    </mat-error>
+  </mat-form-field>
+</td>
+</tr> 
+
+  <!-- <div>
+    <mat-checkbox formControlName="remember_me">recordarme</mat-checkbox>
+  </div> -->
+    </table>
+</form>
+
+</mat-card-content >
+  <mat-card-actions> 
+    <div class="botones">
+  <button mat-raised-button color="primary" (click)="validar()">Loguearse</button>
+  <button  mat-stroked-button color="Basic">Registrarse</button>
+</div>
+  </mat-card-actions>
+
+
+<div *ngIf="mensaje">{{mensaje}}</div>
+
+  </mat-card>
+</div>
