@@ -8,7 +8,7 @@ const moduloMaterial=[
 
 
     LayoutModule,
-
+   
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
@@ -48,6 +48,7 @@ const moduloMaterial=[
     MatSnackBarModule,
     MatTooltipModule,
 
+    
     MatPaginatorModule,
     MatSortModule,
     MatTableModule  ]
