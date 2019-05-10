@@ -23,10 +23,23 @@ export class SideBarComponent implements OnInit {
     //   title: 'Dashboards',
     // },
     {
+      icon: 'home',
+      route: '',
+      title: 'Home'
+     
+    },
+    {
+      icon: ' folder_open',
+      route: 'proyectos',
+      title: 'Mis proyectos'
+     
+    },
+    {
       icon: 'power_settings_new',
       route: 'login',
       title: 'Log-out',
-    }
+    },
+  
   ];
 
   customerRoutes: ROUTE[] = [

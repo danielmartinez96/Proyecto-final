@@ -1,3 +1,44 @@
-<p>
-  form-proyecto works!
-</p>
+<div class="sign-in-container">
+  <mat-card class="sign-in-card">
+      <mat-card-header>
+          <mat-card-title>Crear Proyecto</mat-card-title>
+     </mat-card-header>
+     <mat-card-content>
+<form [formGroup]="formGroup" (ngSubmit)="crear()">
+  <mat-form-field>
+    <input matInput placeholder="Nombre " formControlName="nombre"/>
+    <mat-error *ngIf="formGroup.controls.nombre.hasError('required')">
+      El nombre es obligatorio
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Descripcion" formControlName="descripcion"/>
+    <mat-error *ngIf="formGroup.controls.descripcion.hasError('required')">
+      El descripcion es obligatorio
+    </mat-error>
+  </mat-form-field>
+ 
+  <mat-form-field>
+    <input matInput placeholder="Domicilio" formControlName="domicilio"/>
+    <mat-error *ngIf="formGroup.controls.domicilio.hasError('required')">
+      El domicilio es obligatorio
+    </mat-error>
+  </mat-form-field>
+  
+  
+  <!-- <div>
+    <mat-checkbox formControlName="remember_me">recordarme</mat-checkbox>
+  </div> -->
+   
+</form>
+
+</mat-card-content >
+  <mat-card-actions> 
+    <div class="botones">
+  <button mat-raised-button color="primary" (click)="crear()">Crear</button>
+  <button  mat-stroked-button color="Basic" (click)="volver()">Volver</button>
+</div>
+  </mat-card-actions>
+  </mat-card>
+</div>

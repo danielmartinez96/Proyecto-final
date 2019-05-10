@@ -13,7 +13,7 @@ import { SideBarComponent } from './layout/side-bar/side-bar.component';
 import { HomeComponent } from './home/home.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FormProyectoComponent } from './proyectos/form-proyecto/form-proyecto.component';
-import { DataTableComponent } from './shared/data-table/data-table.component';
+
 import { TableProyectoComponent } from './proyectos/table-proyecto/table-proyecto.component';
 import { ProyectoService } from './services/proyecto.service';
 
@@ -27,7 +27,6 @@ import { ProyectoService } from './services/proyecto.service';
     HomeComponent,
     ProyectosComponent,
     FormProyectoComponent,
-    DataTableComponent,
     TableProyectoComponent,
   ],
   imports: [
